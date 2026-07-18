@@ -1018,7 +1018,7 @@ function makeBarChart(labels, values, { height = 180 } = {}) {
   const maxAbs = Math.max(1, ...values.map(v => Math.abs(v)));
   const zeroY = padding.top + h / 2;
   const step = w / values.length;
-  const barW = Math.max(2, step * 0.6);
+  const barW = Math.min(Math.max(2, step * 0.6), 64);
   const bars = values.map((v, i) => {
     const x = padding.left + i * step + (step - barW) / 2;
     const barH = Math.abs(v) / maxAbs * (h / 2 - 4);
