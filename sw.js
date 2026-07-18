@@ -4,7 +4,7 @@
 // hors-ligne partiel (la saisie reste possible, la synchro avec
 // Firebase reprend automatiquement au retour du réseau).
 // ============================================================
-const CACHE_NAME = 'journal-trading-v5-firebase';
+const CACHE_NAME = 'journal-trading-v6-firebase';
 const SHELL_FILES = [
   './',
   './index.html',
@@ -12,6 +12,9 @@ const SHELL_FILES = [
   './app.js',
   './config.js',
   './manifest.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-icon.png',
 ];
 
 self.addEventListener('install', (event) => {

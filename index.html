@@ -26,10 +26,10 @@
 <div id="landing-screen" class="screen hidden">
 
   <nav class="landing-nav">
-    <div class="topbar-brand">
+    <button class="topbar-brand js-goto-landing" style="background:none; border:none; cursor:pointer; padding:0;">
       <span class="brand-mark">◆</span>
       <span class="brand-name">Prince-QUEST<span class="accent"> FX</span></span>
-    </div>
+    </button>
     <div class="landing-nav-links">
       <button class="landing-nav-link" data-scroll="landing-features" data-i18n="nav.features">Fonctionnalités</button>
       <button class="landing-nav-link" data-scroll="landing-how" data-i18n="nav.how">Comment ça marche</button>
@@ -40,6 +40,7 @@
       <button class="quick-toggle lang-quick-toggle" title="Change language"><span class="qt-icon">🌐</span><span class="qt-label lang-code">FR</span></button>
       <button class="btn btn-ghost btn-sm js-goto-login" data-i18n="nav.login">Se connecter</button>
       <button class="btn btn-primary btn-sm js-goto-signup" data-i18n="nav.start">Commencer</button>
+      <button class="btn btn-primary btn-sm js-back-to-app hidden" data-i18n="nav.back-to-app">Retour à l'application</button>
     </div>
   </nav>
 
@@ -54,6 +55,7 @@
         <div class="hero-actions hero-anim" style="animation-delay:0.46s">
           <button class="btn btn-primary btn-lg js-goto-signup" data-i18n="hero.cta-primary">Créer mon compte gratuitement</button>
           <button class="btn btn-ghost btn-lg js-goto-login" data-i18n="hero.cta-secondary">Se connecter</button>
+          <button class="btn btn-primary btn-lg js-back-to-app hidden" data-i18n="nav.back-to-app">Retour à l'application</button>
         </div>
       </div>
 
@@ -152,6 +154,7 @@
       <h2 data-i18n="ctaband.title">Prêt à trader avec des données, pas des impressions ?</h2>
       <p data-i18n="ctaband.sub">Gratuit, privé, et synchronisé sur tous tes appareils.</p>
       <button class="btn btn-primary btn-lg js-goto-signup" data-i18n="ctaband.button">Créer mon compte</button>
+      <button class="btn btn-primary btn-lg js-back-to-app hidden" data-i18n="nav.back-to-app">Retour à l'application</button>
     </div>
 
   </main>
@@ -307,10 +310,10 @@
 <div id="app" class="screen hidden">
 
   <header class="topbar">
-    <div class="topbar-brand">
+    <button id="app-brand-link" class="topbar-brand js-goto-landing" style="background:none; border:none; cursor:pointer; padding:0;" title="Voir la page d'accueil">
       <span class="brand-mark">◆</span>
       <span class="brand-name">Prince-QUEST<span class="accent"> FX</span></span>
-    </div>
+    </button>
     <div id="ticker" class="ticker" aria-live="polite">
       <div class="ticker-item">
         <span class="ticker-label" data-i18n="ticker.capital">Capital <span id="t-account-badge" class="account-badge">—</span></span>
@@ -336,6 +339,7 @@
     <button class="tab-btn" data-tab="analyse"><span data-i18n="tab.analyse">🎯 Analyse</span></button>
     <button class="tab-btn" data-tab="psycho"><span data-i18n="tab.psycho">🧠 Psychologie</span></button>
     <button class="tab-btn" data-tab="risque"><span data-i18n="tab.risque">🚨 Risque</span></button>
+    <button class="tab-btn" data-tab="rapports"><span data-i18n="tab.rapports">📅 Rapports</span></button>
     <button class="tab-btn" data-tab="parametres"><span data-i18n="tab.parametres">⚙️ Réglages</span></button>
   </nav>
 
@@ -399,6 +403,7 @@
       </div>
 
       <form id="trade-form" class="card form-grid">
+        <div class="field-divider" data-i18n="f.identity-divider">🗓 Identification</div>
         <label class="field"><span data-i18n="f.account">Compte</span>
           <select id="f-account" required></select>
         </label>
@@ -411,6 +416,8 @@
             <option value="vente" data-i18n="f.sell">Vente</option>
           </select>
         </label>
+
+        <div class="field-divider" data-i18n="f.execution-divider">🎯 Exécution</div>
         <label class="field"><span data-i18n="f.entry">Prix d'entrée</span><input type="number" step="any" id="f-entry" required></label>
         <label class="field"><span data-i18n="f.sl">Stop Loss</span><input type="number" step="any" id="f-sl" required></label>
         <label class="field"><span data-i18n="f.tp">Take Profit</span><input type="number" step="any" id="f-tp" required></label>
@@ -425,6 +432,8 @@
             <option value="FCFA">FCFA</option>
           </select>
         </label>
+
+        <div class="field-divider" data-i18n="f.context-divider">🗂 Contexte</div>
         <label class="field"><span data-i18n="f.strategy">Stratégie</span><input type="text" id="f-strategy" placeholder="Ex: SMC, ICT, Breakout…"></label>
         <label class="field"><span data-i18n="f.session">Session</span>
           <select id="f-session">
@@ -475,7 +484,19 @@
 
       <div class="panel-header">
         <h2 data-i18n="journal.history">Historique des trades</h2>
-        <input type="search" id="trade-search" data-i18n-placeholder="journal.search-placeholder" placeholder="Rechercher un actif, une stratégie…" class="search-input">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <select id="trade-filter-direction" class="account-selector">
+            <option value="" data-i18n="journal.filter-all-direction">Tous types</option>
+            <option value="achat" data-i18n="f.buy">Achat</option>
+            <option value="vente" data-i18n="f.sell">Vente</option>
+          </select>
+          <select id="trade-filter-result" class="account-selector">
+            <option value="" data-i18n="journal.filter-all-result">Tous résultats</option>
+            <option value="win" data-i18n="journal.filter-wins">Gagnants</option>
+            <option value="loss" data-i18n="journal.filter-losses">Perdants</option>
+          </select>
+          <input type="search" id="trade-search" data-i18n-placeholder="journal.search-placeholder" placeholder="Rechercher un actif, une stratégie…" class="search-input">
+        </div>
       </div>
       <div id="trades-list" class="trades-list"></div>
     </section>
@@ -528,6 +549,33 @@
       <div class="stats-grid" id="psycho-summary"></div>
       <h2 data-i18n="psycho.mistakes">Erreurs &amp; leçons</h2>
       <div id="psycho-log" class="trades-list"></div>
+    </section>
+
+    <!-- ---------- ONGLET RAPPORTS ---------- -->
+    <section class="tab-panel" id="panel-rapports">
+      <h2 data-i18n="rapports.title">Rapports périodiques</h2>
+      <div class="charts-row">
+        <div class="chart-card" style="grid-column: span 2;">
+          <div class="chart-card-head"><span class="chart-card-title" data-i18n="rapports.monthly">Résultat net par mois (12 derniers)</span></div>
+          <div id="chart-monthly"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-card-head"><span class="chart-card-title" data-i18n="rapports.yearly">Résultat net par année</span></div>
+          <div id="chart-yearly"></div>
+        </div>
+      </div>
+      <div class="charts-row">
+        <div class="chart-card" style="grid-column: 1 / -1;">
+          <div class="chart-card-head"><span class="chart-card-title" data-i18n="rapports.weekly">Résultat net par semaine (12 dernières)</span></div>
+          <div id="chart-weekly"></div>
+        </div>
+      </div>
+
+      <h2 data-i18n="rapports.monthly-detail">Détail par mois</h2>
+      <div class="breakdown" id="breakdown-monthly"></div>
+
+      <h2 data-i18n="rapports.best-periods">Meilleures périodes</h2>
+      <div class="stats-grid" id="rapports-best"></div>
     </section>
 
     <!-- ---------- ONGLET RISQUE ---------- -->

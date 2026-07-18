@@ -44,7 +44,7 @@ const THEMES = ['sombre', 'clair', 'minuit', 'emeraude'];
 const TRANSLATIONS = {
   fr: {
     'nav.features': 'Fonctionnalités', 'nav.how': 'Comment ça marche', 'nav.contact': 'Contact',
-    'nav.theme': 'Thème', 'nav.login': 'Se connecter', 'nav.start': 'Commencer',
+    'nav.theme': 'Thème', 'nav.login': 'Se connecter', 'nav.start': 'Commencer', 'nav.back-to-app': 'Retour à l\u2019application',
     'hero.eyebrow': 'JOURNAL DE TRADING PERSONNEL',
     'hero.title': 'Trade avec discipline.<br>Progresse avec des <span class="accent">données</span>.',
     'hero.sub': "Prince-QUEST FX enregistre chaque trade, met à jour ton capital en temps réel et révèle les habitudes qui font — ou défont — ta performance.",
@@ -85,7 +85,7 @@ const TRANSLATIONS = {
     'asetup.currency': 'Devise principale', 'asetup.country': 'Pays', 'asetup.org': 'Broker / Organisme', 'asetup.submit': 'Commencer',
     'acctype.reel': 'Compte réel', 'acctype.propfirm': 'Prop Firm', 'acctype.crypto': 'Crypto', 'acctype.demo': 'Démo',
     'ticker.capital': 'Capital', 'ticker.winrate': 'Win Rate', 'ticker.rr': 'R:R moy.', 'ticker.pf': 'Profit Factor', 'ticker.exp': 'Expectancy', 'ticker.dd': 'Drawdown max',
-    'tab.dashboard': '🏠 Tableau de bord', 'tab.journal': '📊 Journal', 'tab.stats': '📈 Statistiques', 'tab.analyse': '🎯 Analyse', 'tab.psycho': '🧠 Psychologie', 'tab.risque': '🚨 Risque', 'tab.parametres': '⚙️ Réglages',
+    'tab.dashboard': '🏠 Tableau de bord', 'tab.journal': '📊 Journal', 'tab.stats': '📈 Statistiques', 'tab.analyse': '🎯 Analyse', 'tab.psycho': '🧠 Psychologie', 'tab.risque': '🚨 Risque', 'tab.parametres': '⚙️ Réglages', 'tab.rapports': '📅 Rapports',
     'banner.tagline': '💹 Prince-QUEST FX — suivi automatique de ta performance', 'banner.privacy': '🔒 Données privées, synchronisées via Firebase',
     'dash.accounts': 'Mes comptes', 'dash.overview': "Vue d'ensemble", 'dash.pnl-title': 'Évolution du PnL cumulé',
     'dash.buysell-title': 'Répartition Achat / Vente', 'dash.daily-title': 'Résultat par jour (30J)',
@@ -96,6 +96,14 @@ const TRANSLATIONS = {
     'f.entry': "Prix d'entrée", 'f.sl': 'Stop Loss', 'f.tp': 'Take Profit', 'f.exit': 'Prix de sortie', 'f.lot': 'Taille position (lot)',
     'f.result': 'Résultat', 'f.currency': 'Devise', 'f.strategy': 'Stratégie', 'f.session': 'Session',
     'f.psycho-divider': '🧠 Psychologie', 'f.emotion': 'État émotionnel', 'f.confidence': 'Niveau de confiance (1-10)',
+    'f.identity-divider': '🗓 Identification', 'f.execution-divider': '🎯 Exécution', 'f.context-divider': '🗂 Contexte',
+    'journal.filter-all-direction': 'Tous types', 'journal.filter-all-result': 'Tous résultats',
+    'journal.filter-wins': 'Gagnants', 'journal.filter-losses': 'Perdants',
+    'rapports.title': 'Rapports périodiques', 'rapports.monthly': 'Résultat net par mois (12 derniers)',
+    'rapports.yearly': 'Résultat net par année', 'rapports.weekly': 'Résultat net par semaine (12 dernières)',
+    'rapports.monthly-detail': 'Détail par mois', 'rapports.best-periods': 'Meilleures périodes',
+    'rapports.best-day': 'Meilleur jour', 'rapports.best-week': 'Meilleure semaine',
+    'rapports.best-month': 'Meilleur mois', 'rapports.best-year': 'Meilleure année',
     'f.followed-plan': 'Plan respecté ?', 'f.yes': 'Oui', 'f.no': 'Non', 'f.mistake': 'Erreur commise', 'f.lesson': 'Leçon apprise',
     'f.risk-divider': '🚨 Gestion du risque', 'f.risk-percent': 'Risque en %', 'f.risk-amount': 'Risque en montant',
     'f.suggested-size': 'Taille position suggérée', 'f.notes': 'Annotations / notes', 'f.save': 'Enregistrer le trade', 'f.update': 'Mettre à jour le trade', 'f.cancel-edit': 'Annuler la modification',
@@ -135,7 +143,7 @@ const TRANSLATIONS = {
   },
   en: {
     'nav.features': 'Features', 'nav.how': 'How it works', 'nav.contact': 'Contact',
-    'nav.theme': 'Theme', 'nav.login': 'Log in', 'nav.start': 'Get started',
+    'nav.theme': 'Theme', 'nav.login': 'Log in', 'nav.start': 'Get started', 'nav.back-to-app': 'Back to the app',
     'hero.eyebrow': 'PERSONAL TRADING JOURNAL',
     'hero.title': 'Trade with discipline.<br>Improve with <span class="accent">data</span>.',
     'hero.sub': "Prince-QUEST FX logs every trade, updates your capital in real time, and reveals the habits that make — or break — your performance.",
@@ -176,7 +184,7 @@ const TRANSLATIONS = {
     'asetup.currency': 'Main currency', 'asetup.country': 'Country', 'asetup.org': 'Broker / Organization', 'asetup.submit': 'Get started',
     'acctype.reel': 'Live account', 'acctype.propfirm': 'Prop Firm', 'acctype.crypto': 'Crypto', 'acctype.demo': 'Demo',
     'ticker.capital': 'Capital', 'ticker.winrate': 'Win Rate', 'ticker.rr': 'Avg R:R', 'ticker.pf': 'Profit Factor', 'ticker.exp': 'Expectancy', 'ticker.dd': 'Max Drawdown',
-    'tab.dashboard': '🏠 Dashboard', 'tab.journal': '📊 Journal', 'tab.stats': '📈 Statistics', 'tab.analyse': '🎯 Analysis', 'tab.psycho': '🧠 Psychology', 'tab.risque': '🚨 Risk', 'tab.parametres': '⚙️ Settings',
+    'tab.dashboard': '🏠 Dashboard', 'tab.journal': '📊 Journal', 'tab.stats': '📈 Statistics', 'tab.analyse': '🎯 Analysis', 'tab.psycho': '🧠 Psychology', 'tab.risque': '🚨 Risk', 'tab.parametres': '⚙️ Settings', 'tab.rapports': '📅 Reports',
     'banner.tagline': '💹 Prince-QUEST FX — automatic performance tracking', 'banner.privacy': '🔒 Private data, synced via Firebase',
     'dash.accounts': 'My accounts', 'dash.overview': 'Overview', 'dash.pnl-title': 'Cumulative PnL over time',
     'dash.buysell-title': 'Buy / Sell split', 'dash.daily-title': 'Daily result (30D)',
@@ -187,6 +195,14 @@ const TRANSLATIONS = {
     'f.entry': 'Entry price', 'f.sl': 'Stop Loss', 'f.tp': 'Take Profit', 'f.exit': 'Exit price', 'f.lot': 'Position size (lot)',
     'f.result': 'Result', 'f.currency': 'Currency', 'f.strategy': 'Strategy', 'f.session': 'Session',
     'f.psycho-divider': '🧠 Psychology', 'f.emotion': 'Emotional state', 'f.confidence': 'Confidence level (1-10)',
+    'f.identity-divider': '🗓 Identification', 'f.execution-divider': '🎯 Execution', 'f.context-divider': '🗂 Context',
+    'journal.filter-all-direction': 'All types', 'journal.filter-all-result': 'All results',
+    'journal.filter-wins': 'Wins', 'journal.filter-losses': 'Losses',
+    'rapports.title': 'Periodic reports', 'rapports.monthly': 'Net result by month (last 12)',
+    'rapports.yearly': 'Net result by year', 'rapports.weekly': 'Net result by week (last 12)',
+    'rapports.monthly-detail': 'Monthly detail', 'rapports.best-periods': 'Best periods',
+    'rapports.best-day': 'Best day', 'rapports.best-week': 'Best week',
+    'rapports.best-month': 'Best month', 'rapports.best-year': 'Best year',
     'f.followed-plan': 'Followed plan?', 'f.yes': 'Yes', 'f.no': 'No', 'f.mistake': 'Mistake made', 'f.lesson': 'Lesson learned',
     'f.risk-divider': '🚨 Risk management', 'f.risk-percent': 'Risk in %', 'f.risk-amount': 'Risk amount',
     'f.suggested-size': 'Suggested position size', 'f.notes': 'Notes / annotations', 'f.save': 'Save trade', 'f.update': 'Update trade', 'f.cancel-edit': 'Cancel edit',
@@ -309,6 +325,9 @@ $('#auth-password-toggle')?.addEventListener('click', () => {
 $$('.js-goto-login').forEach(btn => btn.addEventListener('click', () => { state.authMode = 'login'; updateAuthModeUI(); show('auth-screen'); }));
 $$('.js-goto-signup').forEach(btn => btn.addEventListener('click', () => { state.authMode = 'signup'; updateAuthModeUI(); show('auth-screen'); }));
 $$('.js-goto-landing').forEach(btn => btn.addEventListener('click', () => show('landing-screen')));
+$$('.js-back-to-app').forEach(btn => btn.addEventListener('click', () => {
+  show(state.accounts.length ? 'app' : 'account-setup-screen');
+}));
 $$('.landing-nav-link[data-scroll]').forEach(btn => {
   btn.addEventListener('click', () => {
     const target = document.getElementById(btn.dataset.scroll);
@@ -325,6 +344,46 @@ function updateAuthModeUI() {
   $('#auth-error').classList.add('hidden');
   $('#auth-info').classList.add('hidden');
 }
+
+// Sur la landing page : si l'utilisateur est déjà connecté, on remplace les
+// boutons "Se connecter / Commencer" par un bouton "Retour à l'application"
+// (accessible via le logo, même sans se déconnecter).
+function updateLandingAuthUI() {
+  const loggedIn = !!state.user;
+  $$('.js-goto-login, .js-goto-signup').forEach(btn => btn.classList.toggle('hidden', loggedIn));
+  $$('.js-back-to-app').forEach(btn => btn.classList.toggle('hidden', !loggedIn));
+}
+
+// ============================================================
+// HISTORIQUE NAVIGATEUR (flèches précédent / suivant)
+// ============================================================
+const NAV_SCREENS = ['landing-screen', 'setup-screen', 'auth-screen', 'account-setup-screen', 'app'];
+let historyInitialized = false;
+let suppressHistoryPush = false;
+
+function syncHistory(id) {
+  if (suppressHistoryPush) return;
+  const hash = '#' + id;
+  if (!historyInitialized) {
+    history.replaceState({ screen: id }, '', hash);
+    historyInitialized = true;
+    return;
+  }
+  if (location.hash !== hash) {
+    history.pushState({ screen: id }, '', hash);
+  }
+}
+
+window.addEventListener('popstate', (e) => {
+  let id = (e.state && e.state.screen) || (location.hash ? location.hash.slice(1) : null);
+  if (!id || !NAV_SCREENS.includes(id)) return;
+  if ((id === 'app' || id === 'account-setup-screen') && !state.user) {
+    id = 'landing-screen';
+  }
+  suppressHistoryPush = true;
+  show(id);
+  suppressHistoryPush = false;
+});
 
 // ============================================================
 // BOOT
@@ -349,6 +408,8 @@ async function boot() {
 
 function show(id) {
   ['landing-screen', 'setup-screen', 'auth-screen', 'account-setup-screen', 'app'].forEach(s => $('#' + s).classList.toggle('hidden', s !== id));
+  updateLandingAuthUI();
+  syncHistory(id);
 }
 
 async function enterApp() {
@@ -827,6 +888,8 @@ function updateFormRiskPreview() {
 // SEARCH
 // ============================================================
 $('#trade-search').addEventListener('input', () => renderTradesList());
+$('#trade-filter-direction').addEventListener('change', () => renderTradesList());
+$('#trade-filter-result').addEventListener('change', () => renderTradesList());
 
 // ============================================================
 // STATS ENGINE
@@ -1106,17 +1169,79 @@ function renderAnalyseCharts() {
 }
 
 // ============================================================
+// RAPPORTS PERIODIQUES (semaine / mois / annee)
+// ============================================================
+function isoWeekKey(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  const target = new Date(d.valueOf());
+  const dayNr = (d.getDay() + 6) % 7;
+  target.setDate(target.getDate() - dayNr + 3);
+  const firstThursday = target.valueOf();
+  target.setMonth(0, 1);
+  if (target.getDay() !== 4) {
+    target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+  }
+  const weekNum = 1 + Math.round((firstThursday - target.valueOf()) / (7 * 24 * 3600 * 1000));
+  return `${d.getFullYear()}-S${String(weekNum).padStart(2, '0')}`;
+}
+
+function renderReports() {
+  const allTrades = getFilteredTrades();
+  const trades = allTrades.filter(tr => tr.result_value != null && tr.trade_date);
+
+  const byMonth = {};
+  trades.forEach(tr => { const k = tr.trade_date.slice(0, 7); byMonth[k] = (byMonth[k] || 0) + tr.result_value; });
+  const months = Object.keys(byMonth).sort().slice(-12);
+  $('#chart-monthly').innerHTML = months.length
+    ? makeBarChart(months.map(m => m.slice(2)), months.map(m => byMonth[m]), { height: 200 })
+    : `<div class="chart-empty">${t('chart.empty')}</div>`;
+
+  const byYear = {};
+  trades.forEach(tr => { const k = tr.trade_date.slice(0, 4); byYear[k] = (byYear[k] || 0) + tr.result_value; });
+  const years = Object.keys(byYear).sort();
+  $('#chart-yearly').innerHTML = years.length
+    ? makeBarChart(years, years.map(y => byYear[y]), { height: 200 })
+    : `<div class="chart-empty">${t('chart.empty')}</div>`;
+
+  const byWeek = {};
+  trades.forEach(tr => { const k = isoWeekKey(tr.trade_date); byWeek[k] = (byWeek[k] || 0) + tr.result_value; });
+  const weeks = Object.keys(byWeek).sort().slice(-12);
+  $('#chart-weekly').innerHTML = weeks.length
+    ? makeBarChart(weeks.map(w => w.slice(2)), weeks.map(w => byWeek[w]), { height: 180 })
+    : `<div class="chart-empty">${t('chart.empty')}</div>`;
+
+  renderBreakdownGroup('breakdown-monthly', groupBy(allTrades, tr => tr.trade_date ? tr.trade_date.slice(0, 7) : null));
+
+  const byDay = {};
+  trades.forEach(tr => { byDay[tr.trade_date] = (byDay[tr.trade_date] || 0) + tr.result_value; });
+  const bestDay = Object.entries(byDay).sort((a, b) => b[1] - a[1])[0];
+  const bestWeek = Object.entries(byWeek).sort((a, b) => b[1] - a[1])[0];
+  const bestMonth = Object.entries(byMonth).sort((a, b) => b[1] - a[1])[0];
+  const bestYear = Object.entries(byYear).sort((a, b) => b[1] - a[1])[0];
+
+  const bestCard = (label, entry) => `
+    <div class="stat-card">
+      <div class="stat-label">${label}</div>
+      <div class="stat-value ${entry && entry[1] >= 0 ? 'pos' : 'neg'}">${entry ? entry[0] + ' · ' + (entry[1] >= 0 ? '+' : '') + fmt(entry[1], 2) : '—'}</div>
+    </div>`;
+  $('#rapports-best').innerHTML =
+    bestCard(t('rapports.best-day'), bestDay) +
+    bestCard(t('rapports.best-week'), bestWeek) +
+    bestCard(t('rapports.best-month'), bestMonth) +
+    bestCard(t('rapports.best-year'), bestYear);
+}
+
+// ============================================================
 // RENDER
 // ============================================================
 function renderAll() {
-  renderAccountsRow();
-  renderTicker();
-  renderTradesList();
-  renderStats();
-  renderBreakdowns();
-  renderPsycho();
-  renderDashboardCharts();
-  renderAnalyseCharts();
+  // Chaque étape est isolée : si l'une échoue, les autres s'exécutent quand
+  // même (avant, une erreur dans renderTicker bloquait tout le reste —
+  // graphiques, statistiques, etc. — sans rien afficher).
+  const steps = [renderAccountsRow, renderTicker, renderTradesList, renderStats, renderBreakdowns, renderPsycho, renderDashboardCharts, renderAnalyseCharts, renderReports];
+  steps.forEach(fn => {
+    try { fn(); } catch (err) { console.error('[renderAll]', fn.name, err); }
+  });
 }
 
 function fmt(n, decimals = 2) {
@@ -1124,55 +1249,67 @@ function fmt(n, decimals = 2) {
   return n.toLocaleString('fr-FR', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 }
 
+function setEl(sel, text, className) {
+  const el = $(sel);
+  if (!el) return;
+  if (text !== undefined) el.textContent = text;
+  if (className !== undefined) el.className = className;
+}
+
 function renderTicker() {
   const trades = getFilteredTrades();
   const s = computeStats(trades);
 
   if (state.accounts.length) {
-    let capital, currency, badgeText, badgeClass;
+    if (state.activeAccountId !== 'all' && !state.accounts.some(a => a.id === state.activeAccountId)) {
+      // Le compte actif n'existe plus (ex: supprimé) -> on retombe sur "tous les comptes".
+      state.activeAccountId = 'all';
+    }
+    let capital = 0, currency = state.accounts[0].currency, badgeText = '', badgeClass = 'reel', initialSum = 0;
     if (state.activeAccountId !== 'all') {
       const acc = state.accounts.find(a => a.id === state.activeAccountId);
-      if (acc) {
-        capital = computeAccountCapital(acc);
-        currency = acc.currency;
-        badgeText = t('acctype.' + (acc.account_type || 'reel'));
-        badgeClass = acc.account_type === 'propfirm' ? 'propfirm' : 'reel';
-      }
+      capital = computeAccountCapital(acc);
+      currency = acc.currency;
+      badgeText = t('acctype.' + (acc.account_type || 'reel'));
+      badgeClass = acc.account_type === 'propfirm' ? 'propfirm' : 'reel';
+      initialSum = acc.initial_capital || 0;
     } else {
-      currency = state.accounts[0].currency;
       capital = state.accounts.reduce((sum, acc) => sum + computeAccountCapital(acc), 0);
       badgeText = t('dash.all-accounts');
-      badgeClass = 'reel';
+      initialSum = state.accounts.reduce((s2, a) => s2 + a.initial_capital, 0);
     }
-    const initialSum = state.activeAccountId !== 'all'
-      ? (state.accounts.find(a => a.id === state.activeAccountId)?.initial_capital || 0)
-      : state.accounts.reduce((s2, a) => s2 + a.initial_capital, 0);
-    $('#t-capital').textContent = fmt(capital, 2) + ' ' + currency;
-    $('#t-capital').className = 'ticker-value ' + (capital >= initialSum ? 'pos' : 'neg');
-    const badge = $('#t-account-badge');
-    badge.textContent = badgeText;
-    badge.className = 'account-badge ' + badgeClass;
+    setEl('#t-capital', fmt(capital, 2) + ' ' + currency, 'ticker-value ' + (capital >= initialSum ? 'pos' : 'neg'));
+    setEl('#t-account-badge', badgeText, 'account-badge ' + badgeClass);
   } else {
-    $('#t-capital').textContent = '—';
+    setEl('#t-capital', '—');
   }
 
-  $('#t-winrate').textContent = s.total ? fmt(s.winRate, 1) + '%' : '—';
-  $('#t-rr').textContent = s.avgRR ? '1:' + fmt(s.avgRR, 2) : '—';
-  $('#t-pf').textContent = Number.isFinite(s.profitFactor) ? fmt(s.profitFactor, 2) : '∞';
-  $('#t-exp').textContent = s.total ? fmt(s.expectancy, 2) : '—';
-  $('#t-dd').textContent = s.total ? fmt(s.maxDD, 2) : '—';
-  $('#t-exp').className = 'ticker-value ' + (s.expectancy >= 0 ? 'pos' : 'neg');
+  setEl('#t-winrate', s.total ? fmt(s.winRate, 1) + '%' : '—');
+  setEl('#t-rr', s.avgRR ? '1:' + fmt(s.avgRR, 2) : '—');
+  setEl('#t-pf', Number.isFinite(s.profitFactor) ? fmt(s.profitFactor, 2) : '∞');
+  setEl('#t-exp', s.total ? fmt(s.expectancy, 2) : '—', 'ticker-value ' + (s.expectancy >= 0 ? 'pos' : 'neg'));
+  setEl('#t-dd', s.total ? fmt(s.maxDD, 2) : '—');
 }
 
 function renderTradesList() {
   const container = $('#trades-list');
   const searchQuery = $('#trade-search').value.trim().toLowerCase();
+  const directionFilter = $('#trade-filter-direction').value;
+  const resultFilter = $('#trade-filter-result').value;
   let trades = [...getFilteredTrades()].reverse();
   if (searchQuery) {
     trades = trades.filter(tr =>
       (tr.asset || '').toLowerCase().includes(searchQuery) ||
       (tr.strategy || '').toLowerCase().includes(searchQuery)
     );
+  }
+  if (directionFilter) {
+    trades = trades.filter(tr => tr.direction === directionFilter);
+  }
+  if (resultFilter === 'win') {
+    trades = trades.filter(tr => tr.result_value != null && tr.result_value > 0);
+  } else if (resultFilter === 'loss') {
+    trades = trades.filter(tr => tr.result_value != null && tr.result_value < 0);
   }
   if (!trades.length) {
     container.innerHTML = `<div class="empty-state">${t('empty.trades')}</div>`;
